@@ -6,88 +6,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MayTech Labs</title>
   <meta name="description" content="Careful tools for low-level code and AI-era licensing.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <header class="wrap">
-    <a class="brand" href="/">MayTech Labs</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#install">Install</a>
-      <a href="#license">License</a>
-      <a href="https://github.com/maytech-labs">GitHub</a>
-    </nav>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/"><img src="favicon.svg" alt="" width="22" height="22">MayTech Labs</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#install">Install</a>
+        <a href="#license">License</a>
+        <a class="pill pill-dark small" href="https://github.com/maytech-labs">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow reveal">MayTech Labs</p>
+      <h1 class="reveal">Tools built<br><span class="grad">with care.</span></h1>
+      <p class="lede reveal">Small, well-tested tools for ARM64 assembly, AI coding agents, and licensing code for the age of AI training.</p>
+      <div class="ctas reveal">
+        <a class="pill pill-dark" href="#projects">Explore projects</a>
+        <a class="pill pill-light" href="https://github.com/maytech-labs">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="terminal reveal">
+        <div class="term-bar"><span></span><span></span><span></span><em>zsh</em></div>
+<pre><span class="p">$</span> brew tap maytech-labs/tap
+<span class="p">$</span> brew install arm-tools real-check
+<span class="dim">==&gt; Installing arm-tools, real-check</span>
+<span class="p">$</span> real-check check .
+<span class="ok">errors: 0, warnings: 0, info: 0</span></pre>
+      </div>
+    </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <h1>Careful tools for low-level code and AI&#8209;era licensing.</h1>
-      <p>Small, well-tested tools for ARM64 assembly, AI coding agents, and licensing code for the age of AI training. All source-available under REAL 1.0.</p>
-    </section>
+  <section class="stats wrap">
+    <div class="stat reveal"><strong>5</strong><span>projects</span></div>
+    <div class="stat reveal"><strong>32</strong><span>assembly lessons</span></div>
+    <div class="stat reveal"><strong>25</strong><span>lint rules</span></div>
+    <div class="stat reveal"><strong>2</strong><span>platforms: macOS &amp; Linux</span></div>
+  </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+  <section id="projects" class="wrap section">
+    <p class="eyebrow reveal">Projects</p>
+    <h2 class="reveal">Everything we make.</h2>
 
-      <h3>Assembly</h3>
-      <div class="grid">
-        <article class="card">
-          <div class="card-head"><h4>arm-tools</h4><span class="tag">pre-release</span></div>
-          <p>Language server, linter, and formatter for AArch64 assembly on Apple silicon and Linux, checked against clang.</p>
-          <p class="links"><a href="https://maytech-labs.github.io/arm-tools/">Docs</a><a href="https://github.com/maytech-labs/arm-tools">Source</a></p>
-        </article>
-        <article class="card">
-          <div class="card-head"><h4>arm-lessons</h4><span class="tag">32 lessons</span></div>
-          <p>A slow, hands-on ARM64 assembly course for Linux and Apple silicon, from binary basics to writing C by hand. Every example is tested on both.</p>
-          <p class="links"><a href="https://maytech-labs.github.io/arm-lessons/">Read the book</a><a href="https://github.com/maytech-labs/arm-lessons">Source</a></p>
-        </article>
+    <div class="bento">
+      <article class="tile span-2 t-blue reveal">
+        <div class="tile-text">
+          <span class="tag">Assembly &middot; pre-release</span>
+          <h3>arm-tools</h3>
+          <p>A language server, linter, and formatter for AArch64 assembly on Apple silicon and Linux. Errors as you type, in clang's words.</p>
+          <p class="links"><a href="https://maytech-labs.github.io/arm-tools/">Docs &rarr;</a><a href="https://github.com/maytech-labs/arm-tools">Source &rarr;</a></p>
+        </div>
+<pre class="code"><span class="c">; armtool: fn _sum(x0: ptr&lt;i32&gt;, x1: u64) -&gt; i64</span>
+<span class="l">_sum:</span>
+    <span class="k">mov</span>     x2, #0
+<span class="l">1:</span> <span class="k">cbz</span>     x1, 2f
+    <span class="k">ldrsw</span>   x3, [x0], #4
+    <span class="k">add</span>     x2, x2, x3
+    <span class="k">sub</span>     x1, x1, #1
+    <span class="k">b</span>       1b
+<span class="l">2:</span> <span class="k">mov</span>     x0, x2
+    <span class="k">ret</span></pre>
+      </article>
+
+      <article class="tile t-orange reveal">
+        <span class="tag">Course &middot; 32 lessons</span>
+        <h3>arm-lessons</h3>
+        <p>A slow, hands-on ARM64 assembly course, from binary basics to writing C by hand. Every example runs on Linux and Apple silicon.</p>
+        <p class="links"><a href="https://maytech-labs.github.io/arm-lessons/">Read the book &rarr;</a></p>
+      </article>
+
+      <article class="tile span-2 t-green reveal">
+        <div class="tile-text">
+          <span class="tag">AI agents &middot; pre-release</span>
+          <h3>mochi-donut</h3>
+          <p>Evidence-backed tools for AI coding agents, each named after a mochi donut flavor.</p>
+          <p class="links"><a href="https://github.com/maytech-labs/mochi-donut">Source &rarr;</a></p>
+        </div>
+        <ul class="flavors">
+          <li class="matcha"><b>matcha</b> how this repo does things</li>
+          <li class="yuzu"><b>yuzu</b> which cluster and account</li>
+          <li class="ube"><b>ube</b> did the checks pass</li>
+          <li class="taro"><b>taro</b> can this PR merge</li>
+        </ul>
+      </article>
+
+      <article class="tile t-purple reveal">
+        <span class="tag">License</span>
+        <h3>REAL 1.0</h3>
+        <p>The Reciprocal Ethical AI License. Train a model on the code, and you open the weights.</p>
+        <p class="links"><a href="https://github.com/maytech-labs/real-license">Read it &rarr;</a></p>
+      </article>
+
+      <article class="tile span-3 t-pink reveal">
+        <div class="tile-text">
+          <span class="tag">License tooling &middot; 0.1.1</span>
+          <h3>real-check</h3>
+          <p>Checks a repository and every dependency for compatibility with REAL 1.0, from license file to SPDX headers. Runs in CI, exits non-zero when something's off.</p>
+          <p class="links"><a href="https://github.com/maytech-labs/real-check">Source &rarr;</a></p>
+        </div>
+<pre class="code"><span class="p">$</span> real-check check .            <span class="c"># repository and dependencies</span>
+<span class="p">$</span> real-check repo .             <span class="c"># license file, manifests, SPDX headers</span>
+<span class="p">$</span> real-check classify "MIT OR GPL-3.0-only"
+<span class="p">$</span> real-check check . --format json --strict</pre>
+      </article>
+    </div>
+  </section>
+
+  <section id="install" class="install">
+    <div class="wrap install-inner">
+      <div class="reveal">
+        <p class="eyebrow light">Install</p>
+        <h2>One tap. Every tool.</h2>
+        <p class="lede">Everything ships through the <a href="https://github.com/maytech-labs/homebrew-tap">maytech-labs Homebrew tap</a>, with prebuilt binaries for macOS and Linux.</p>
       </div>
+<pre class="install-code reveal"><span class="p">$</span> brew tap maytech-labs/tap
+<span class="p">$</span> brew trust maytech-labs/tap
+<span class="p">$</span> brew install arm-tools real-check</pre>
+    </div>
+  </section>
 
-      <h3>AI coding agents</h3>
-      <div class="grid">
-        <article class="card">
-          <div class="card-head"><h4>mochi-donut</h4><span class="tag">pre-release</span></div>
-          <p>Evidence-backed CLI tools for AI coding agents: learn how a repo does things, catch stale docs, confirm checks passed, and avoid touching the wrong cluster or account.</p>
-          <p class="links"><a href="https://github.com/maytech-labs/mochi-donut">Source</a></p>
-        </article>
+  <section id="license" class="wrap section">
+    <p class="eyebrow reveal">License</p>
+    <h2 class="reveal">Open to people.<br><span class="grad">Fair to everyone.</span></h2>
+    <p class="lede center reveal">Our projects use the Reciprocal Ethical AI License (REAL) 1.0. It's source-available, not OSI-approved, so read it before you depend on the code.</p>
+
+    <div class="features">
+      <div class="feature reveal">
+        <div class="icon i-blue"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Use it freely</h3>
+        <p>Run, modify, and share the code for ordinary software.</p>
       </div>
-
-      <h3>Licensing</h3>
-      <div class="grid">
-        <article class="card">
-          <div class="card-head"><h4>REAL 1.0</h4><span class="tag">license</span></div>
-          <p>The Reciprocal Ethical AI License. Share and modify freely; train a model on the code and you release the weights and training pipeline under the same terms.</p>
-          <p class="links"><a href="https://github.com/maytech-labs/real-license">Read it</a></p>
-        </article>
-        <article class="card">
-          <div class="card-head"><h4>real-check</h4><span class="tag">0.1.1</span></div>
-          <p>Checks that a repository and its dependencies are compatible with REAL 1.0: license file, manifests, SPDX headers, and every dependency's license.</p>
-          <p class="links"><a href="https://github.com/maytech-labs/real-check">Source</a></p>
-        </article>
+      <div class="feature reveal">
+        <div class="icon i-purple"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></div>
+        <h3>Train on it, open the model</h3>
+        <p>Models trained on REAL code release their weights, scripts, and data under the same terms, including over a network.</p>
       </div>
-    </section>
+      <div class="feature reveal">
+        <div class="icon i-pink"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
+        <h3>Ethical limits</h3>
+        <p>No mass surveillance, lethal autonomous weapons, unlawful discrimination, or unmonitored critical infrastructure.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="install">
-      <h2>Install</h2>
-      <p>Everything ships through the <a href="https://github.com/maytech-labs/homebrew-tap">maytech-labs Homebrew tap</a>.</p>
-      <pre><code>brew tap maytech-labs/tap
-brew trust maytech-labs/tap
-brew install arm-tools real-check</code></pre>
-    </section>
-
-    <section id="license">
-      <h2>License</h2>
-      <p>Our projects use the <a href="https://github.com/maytech-labs/real-license">Reciprocal Ethical AI License (REAL) 1.0</a>. It's source-available, not OSI-approved, so read it before you depend on the code.</p>
-      <ul>
-        <li><strong>Use it freely.</strong> Run, modify, and share the code for ordinary software.</li>
-        <li><strong>Train on it, open the model.</strong> Models trained on REAL code must release their weights, training scripts, and data under the same terms, including models served over a network.</li>
-        <li><strong>Ethical limits.</strong> No mass surveillance, lethal autonomous weapons, unlawful discrimination, or unmonitored critical infrastructure.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="wrap">
-    <p>&copy; 2026 MayTech Labs &middot; <a href="https://github.com/maytech-labs">github.com/maytech-labs</a></p>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>&copy; 2026 MayTech Labs</span>
+      <a href="https://github.com/maytech-labs">github.com/maytech-labs</a>
+    </div>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
 </body>
 </html>
