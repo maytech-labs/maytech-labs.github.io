@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: LicenseRef-REAL-1.0 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MayTech Labs</title>
+  <meta name="description" content="Careful tools for low-level code and AI-era licensing.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="/">MayTech Labs</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#install">Install</a>
+      <a href="#license">License</a>
+      <a href="https://github.com/maytech-labs">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Careful tools for low-level code and AI&#8209;era licensing.</h1>
+      <p>Small, well-tested tools for ARM64 assembly, AI coding agents, and licensing code for the age of AI training. All source-available under REAL 1.0.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <h3>Assembly</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-head"><h4>arm-tools</h4><span class="tag">pre-release</span></div>
+          <p>Language server, linter, and formatter for AArch64 assembly on Apple silicon and Linux, checked against clang.</p>
+          <p class="links"><a href="https://maytech-labs.github.io/arm-tools/">Docs</a><a href="https://github.com/maytech-labs/arm-tools">Source</a></p>
+        </article>
+        <article class="card">
+          <div class="card-head"><h4>arm-lessons</h4><span class="tag">32 lessons</span></div>
+          <p>A slow, hands-on ARM64 assembly course for Linux and Apple silicon, from binary basics to writing C by hand. Every example is tested on both.</p>
+          <p class="links"><a href="https://maytech-labs.github.io/arm-lessons/">Read the book</a><a href="https://github.com/maytech-labs/arm-lessons">Source</a></p>
+        </article>
+      </div>
+
+      <h3>AI coding agents</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-head"><h4>mochi-donut</h4><span class="tag">pre-release</span></div>
+          <p>Evidence-backed CLI tools for AI coding agents: learn how a repo does things, catch stale docs, confirm checks passed, and avoid touching the wrong cluster or account.</p>
+          <p class="links"><a href="https://github.com/maytech-labs/mochi-donut">Source</a></p>
+        </article>
+      </div>
+
+      <h3>Licensing</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-head"><h4>REAL 1.0</h4><span class="tag">license</span></div>
+          <p>The Reciprocal Ethical AI License. Share and modify freely; train a model on the code and you release the weights and training pipeline under the same terms.</p>
+          <p class="links"><a href="https://github.com/maytech-labs/real-license">Read it</a></p>
+        </article>
+        <article class="card">
+          <div class="card-head"><h4>real-check</h4><span class="tag">0.1.1</span></div>
+          <p>Checks that a repository and its dependencies are compatible with REAL 1.0: license file, manifests, SPDX headers, and every dependency's license.</p>
+          <p class="links"><a href="https://github.com/maytech-labs/real-check">Source</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2>Install</h2>
+      <p>Everything ships through the <a href="https://github.com/maytech-labs/homebrew-tap">maytech-labs Homebrew tap</a>.</p>
+      <pre><code>brew tap maytech-labs/tap
+brew trust maytech-labs/tap
+brew install arm-tools real-check</code></pre>
+    </section>
+
+    <section id="license">
+      <h2>License</h2>
+      <p>Our projects use the <a href="https://github.com/maytech-labs/real-license">Reciprocal Ethical AI License (REAL) 1.0</a>. It's source-available, not OSI-approved, so read it before you depend on the code.</p>
+      <ul>
+        <li><strong>Use it freely.</strong> Run, modify, and share the code for ordinary software.</li>
+        <li><strong>Train on it, open the model.</strong> Models trained on REAL code must release their weights, training scripts, and data under the same terms, including models served over a network.</li>
+        <li><strong>Ethical limits.</strong> No mass surveillance, lethal autonomous weapons, unlawful discrimination, or unmonitored critical infrastructure.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>&copy; 2026 MayTech Labs &middot; <a href="https://github.com/maytech-labs">github.com/maytech-labs</a></p>
+  </footer>
+</body>
+</html>
