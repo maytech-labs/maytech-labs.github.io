@@ -1,5 +1,7 @@
 # maytech-labs.github.io
 
+[![License: REAL 1.0](https://img.shields.io/badge/License-REAL_1.0-blue.svg)](LICENSE.md)
+
 The MayTech Labs website, served by GitHub Pages at <https://maytech-labs.github.io>.
 
 Plain HTML and CSS, no build step. Preview locally:
