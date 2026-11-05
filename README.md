@@ -23,6 +23,8 @@ Copy `tolarian-machine/index.html` into a new folder, like `my-project/index.htm
 
 If you change `style.css`, bump the `?v=` on its `<link>` so browsers don't use a cached copy.
 
+Ideas for the site that haven't shipped yet are in [`docs/ideas.md`](docs/ideas.md).
+
 ## License
 
 [REAL 1.0](LICENSE.md)
