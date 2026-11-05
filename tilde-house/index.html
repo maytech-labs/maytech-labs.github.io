@@ -9,7 +9,7 @@
   <meta name="description" content="A made-up fine dining restaurant from the MayTech Labs junior lab. Not a real restaurant; there are no reservations.">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
-  <link rel="stylesheet" href="/style.css?v=11">
+  <link rel="stylesheet" href="/style.css?v=12">
 </head>
 <body>
   <header class="topbar">
@@ -38,7 +38,7 @@
       <div class="hero-text">
         <span class="not-real">Not a real restaurant &middot; there is no tasting menu</span>
         <h1>Tilde House</h1>
-        <p>A fine dining experience from the restaurant group behind Bready's, Burger Up, and The H Diner. Candlelight, cloth napkins, and very small portions on very large plates.</p>
+        <p>A fine dining experience from the restaurant group behind Bready's, Burger Up, and The H Diner. Every dish is shaped like a tilde, every drink is poured into a tilde-shaped glass, and the plates are very large.</p>
         <span class="tagline">Dining, approximately.</span>
         <div class="hero-ctas">
           <a class="btn btn-white" href="#menu">See the tasting menu</a>
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="hero-art" aria-hidden="true" style="display:grid;place-items:center">
-        <div class="plate"><b>~</b></div>
+        <div class="table-set"><div class="plate"><svg class="tilde steak" viewBox="0 0 120 60" aria-hidden="true"><path class="food" d="M16 38C30 12 48 12 60 30S90 48 104 22"/><path class="shine" d="M24 26C34 12 46 12 54 22"/><circle class="dot" cx="24" cy="52" r="3"/><circle class="dot" cx="96" cy="8" r="3"/></svg></div><svg class="glass grape" viewBox="0 0 80 160" aria-hidden="true"><defs><clipPath id="gh1"><path d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/></clipPath></defs><rect class="drink" clip-path="url(#gh1)" x="0" y="58" width="80" height="52"/><path class="bowl" d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/><path class="stem" d="M40 104V146"/><ellipse class="foot" cx="40" cy="148" rx="20" ry="4"/></svg></div>
       </div>
     </section>
 
@@ -56,20 +56,35 @@
       <div class="menu gold">
         <h3>Tonight</h3>
         <div class="dish"><b>A very small bite</b><i></i><em>first</em></div>
-        <p>Compliments of the chef. Blink and you'll miss it.</p>
-        <div class="dish"><b>Soup, with a swirl</b><i></i><em>second</em></div>
-        <p>The swirl is in the shape of a tilde. The chef insists.</p>
+        <p>A tiny tilde of pea pur&eacute;e, compliments of the chef. Blink and you'll miss it.</p>
+        <div class="dish"><b>The noodle</b><i></i><em>second</em></div>
+        <p>One long noodle, bent into a tilde. It took the chef all afternoon.</p>
         <div class="dish"><b>The main course</b><i></i><em>third</em></div>
-        <p>Something fancy, under a silver dome. We lift it together.</p>
+        <p>A steak cut into a tilde, under a silver dome. We lift it together.</p>
         <div class="dish"><b>A palate cleanser</b><i></i><em>fourth</em></div>
-        <p>A scoop of sorbet, to get ready for dessert.</p>
+        <p>Strawberry sorbet, piped into a tilde, to get ready for dessert.</p>
         <div class="dish"><b>Dessert</b><i></i><em>last, and best</em></div>
-        <p>The reason anyone sits through four other courses.</p>
+        <p>A chocolate cake tilde. The reason anyone sits through four other courses.</p>
+      </div>
+    </section>
+
+    <section class="block serif">
+      <h2>Everything is a tilde</h2>
+      <p class="sub">Every dish leaves the kitchen shaped like a tilde, and every drink is poured into a tilde-shaped glass. No exceptions.</p>
+      <div class="tilde-wall">
+        <div class="tilde-tile"><div class="plate"><svg class="tilde noodle" viewBox="0 0 120 60" aria-hidden="true"><path class="food" d="M16 38C30 12 48 12 60 30S90 48 104 22"/><path class="shine" d="M24 26C34 12 46 12 54 22"/><circle class="dot" cx="24" cy="52" r="3"/><circle class="dot" cx="96" cy="8" r="3"/></svg></div><h3>The noodle</h3><p>One noodle, one tilde.</p></div>
+        <div class="tilde-tile"><div class="plate"><svg class="tilde steak" viewBox="0 0 120 60" aria-hidden="true"><path class="food" d="M16 38C30 12 48 12 60 30S90 48 104 22"/><path class="shine" d="M24 26C34 12 46 12 54 22"/><circle class="dot" cx="24" cy="52" r="3"/><circle class="dot" cx="96" cy="8" r="3"/></svg></div><h3>The main course</h3><p>Steak, cut to shape.</p></div>
+        <div class="tilde-tile"><div class="plate"><svg class="tilde sorbet" viewBox="0 0 120 60" aria-hidden="true"><path class="food" d="M16 38C30 12 48 12 60 30S90 48 104 22"/><path class="shine" d="M24 26C34 12 46 12 54 22"/><circle class="dot" cx="24" cy="52" r="3"/><circle class="dot" cx="96" cy="8" r="3"/></svg></div><h3>The palate cleanser</h3><p>Strawberry sorbet, piped.</p></div>
+        <div class="tilde-tile"><div class="plate"><svg class="tilde cake" viewBox="0 0 120 60" aria-hidden="true"><path class="food" d="M16 38C30 12 48 12 60 30S90 48 104 22"/><path class="shine" d="M24 26C34 12 46 12 54 22"/><circle class="dot" cx="24" cy="52" r="3"/><circle class="dot" cx="96" cy="8" r="3"/></svg></div><h3>Dessert</h3><p>Chocolate cake, with cream dots.</p></div>
+        <div class="tilde-tile"><svg class="glass grape" viewBox="0 0 80 160" aria-hidden="true"><defs><clipPath id="gt1"><path d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/></clipPath></defs><rect class="drink" clip-path="url(#gt1)" x="0" y="58" width="80" height="52"/><path class="bowl" d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/><path class="stem" d="M40 104V146"/><ellipse class="foot" cx="40" cy="148" rx="20" ry="4"/></svg><h3>Grape juice</h3><p>Served like a fine wine.</p></div>
+        <div class="tilde-tile"><svg class="glass bubbly" viewBox="0 0 80 160" aria-hidden="true"><defs><clipPath id="gt2"><path d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/></clipPath></defs><rect class="drink" clip-path="url(#gt2)" x="0" y="50" width="80" height="60"/><circle cx="30" cy="92" r="2" fill="#fff" opacity=".8"/><circle cx="42" cy="80" r="2" fill="#fff" opacity=".8"/><circle cx="36" cy="68" r="2" fill="#fff" opacity=".8"/><path class="bowl" d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/><path class="stem" d="M40 104V146"/><ellipse class="foot" cx="40" cy="148" rx="20" ry="4"/></svg><h3>Sparkling cider</h3><p>For toasts.</p></div>
+        <div class="tilde-tile"><svg class="glass water" viewBox="0 0 80 160" aria-hidden="true"><defs><clipPath id="gt3"><path d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/></clipPath></defs><rect class="drink" clip-path="url(#gt3)" x="0" y="40" width="80" height="70"/><path class="bowl" d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/><path class="stem" d="M40 104V146"/><ellipse class="foot" cx="40" cy="148" rx="20" ry="4"/></svg><h3>Fancy water</h3><p>Same water, wavier glass.</p></div>
+        <div class="tilde-tile"><svg class="glass apple" viewBox="0 0 80 160" aria-hidden="true"><defs><clipPath id="gt4"><path d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/></clipPath></defs><rect class="drink" clip-path="url(#gt4)" x="0" y="64" width="80" height="46"/><path class="bowl" d="M20 8C44 40-4 72 20 104H60C36 72 84 40 60 8Z"/><path class="stem" d="M40 104V146"/><ellipse class="foot" cx="40" cy="148" rx="20" ry="4"/></svg><h3>Apple juice</h3><p>The house favorite.</p></div>
       </div>
     </section>
 
     <section class="stats">
-      <div class="stat"><b>~</b><span>the house symbol</span></div>
+      <div class="stat"><b>100%</b><span>of the food is shaped like a tilde</span></div>
       <div class="stat"><b>5</b><span>courses, each smaller than the last</span></div>
       <div class="stat"><b>Fancy</b><span>dress code: your best outfit</span></div>
       <div class="stat"><b>0</b><span>tables available, ever</span></div>
@@ -94,7 +109,7 @@
       <a class="btn btn-blue" href="/#junior">More from the junior lab</a>
     </section>
 
-    <p class="note">Tilde House is a made-up restaurant from the MayTech Labs junior lab: ideas our youngest founder has had since he was two, brought to life for fun. The name and the idea of a fine dining experience are his; the menu and everything else here we made up around it. It doesn't exist, serves nothing, and any resemblance to a real restaurant is a happy accident.</p>
+    <p class="note">Tilde House is a made-up restaurant from the MayTech Labs junior lab: ideas our youngest founder has had since he was two, brought to life for fun. The name, the fine dining, and the tilde-shaped food and glasses are his; the menu and everything else here we made up around it. It doesn't exist, serves nothing, and any resemblance to a real restaurant is a happy accident.</p>
   </main>
 
   <footer class="footer">
