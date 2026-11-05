@@ -225,6 +225,32 @@ a { color: var(--accent); text-decoration: none; }
 .flavor.gold small { color: #57534e; }
 .flavor .here { font-size: 13px; font-weight: 700; color: var(--accent); }
 
+.a-hdiner { background: linear-gradient(135deg, #ecfeff, #a5f3fc); }
+.a-tilde { background: linear-gradient(135deg, #292524, #0c0a09); }
+.hero.h-hdiner { background: radial-gradient(500px 260px at 85% 15%, rgba(255, 255, 255, 0.3), transparent 60%), linear-gradient(120deg, #0e7490 0%, #0891b2 50%, #f472b6 100%); }
+.hero.h-tilde { background: radial-gradient(500px 260px at 85% 15%, rgba(212, 175, 55, 0.22), transparent 60%), linear-gradient(120deg, #0c0a09 0%, #292524 60%, #44403c 100%); }
+.hero.h-hdiner .not-real, .hero.h-tilde .not-real { background: #fff7ed; margin-bottom: 14px; }
+.hero.h-tilde h1, .serif h3, .serif h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.hero.h-tilde h1 { letter-spacing: 0.02em; }
+.hero.h-tilde .tagline { color: #e7c873; font-family: Georgia, serif; }
+.h-badge { width: 190px; height: 190px; border-radius: 50%; background: #fff; border: 8px solid #f472b6; display: grid; place-items: center; box-shadow: 0 24px 48px -12px rgba(8, 50, 70, 0.5); }
+.h-badge b { font-size: 120px; line-height: 1; color: #0e7490; }
+.h-badge.small { width: 110px; height: 110px; border-width: 5px; }
+.h-badge.small b { font-size: 68px; }
+.plate { width: 210px; height: 210px; border-radius: 50%; background: radial-gradient(circle, #fafaf9 0 52%, #e7e5e4 53% 56%, #fafaf9 57%); display: grid; place-items: center; box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6); }
+.plate b { font: 400 110px/1 Georgia, serif; color: #b8962e; transform: translateY(-8px); }
+.plate.small { width: 116px; height: 116px; }
+.plate.small b { font-size: 60px; transform: translateY(-4px); }
+.menu.gold { border-color: #d6d3d1; background: #fafaf9; }
+.menu.gold h3 { color: #78716c; font-family: Georgia, serif; font-weight: 400; letter-spacing: 0.2em; }
+.menu.gold .dish b { font-family: Georgia, serif; font-weight: 400; }
+.menu.gold .dish i { border-color: #d6d3d1; }
+.menu.gold .dish em { color: #a16207; }
+.menu.teal { border-color: #a5f3fc; background: #f0fdff; }
+.menu.teal h3 { color: #0e7490; }
+.menu.teal .dish i { border-color: #67e8f9; }
+.menu.teal .dish em { color: #be185d; }
+
 /* Footer */
 .footer { margin-top: 72px; border-top: 1px solid var(--line); background: var(--soft); }
 .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; padding-bottom: 24px; font-size: 13px; color: var(--faint); }
