@@ -4,7 +4,7 @@ Things we've talked about doing to the site but haven't done. Decisions that sha
 
 ## Sections
 
-- **Kids' ideas.** A light-hearted section of sub-pages turning ideas a seven-year-old has had since he was two into charming, obviously-not-real "products". Needs its own playful look and a "not real" label on every page; first name or nickname only, no photos ([0007](https://github.com/maytech-labs/.github/blob/main/docs/decisions/0007-site-sections-earn-their-place.md)). Waiting on the ideas themselves.
+- **Junior lab: more companies.** The section is live with Barley's Tired Root Beer Company (`/barleys-tired-root-beer/`). Add the next idea as its own page, copied from that one, with its own card in the Junior lab section. Keep the "not real" labels and the rules in [0007](https://github.com/maytech-labs/.github/blob/main/docs/decisions/0007-site-sections-earn-their-place.md).
 - **Research.** A section for the research projects, built from the project-page template. Waiting on a first project with details that can be published ([0007](https://github.com/maytech-labs/.github/blob/main/docs/decisions/0007-site-sections-earn-their-place.md)). Could start as a hidden page that's linked from nowhere until it's ready.
 - **More closed-source projects.** There are others besides Tolarian Machine and Urza's Binder; add them under [0006](https://github.com/maytech-labs/.github/blob/main/docs/decisions/0006-closed-source-projects-on-the-site.md), in the Magic section or a new one that fits.
 
