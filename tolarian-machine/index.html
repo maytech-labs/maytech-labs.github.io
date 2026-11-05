@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: LicenseRef-REAL-1.0 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tolarian Machine · MayTech Labs</title>
+  <meta name="description" content="A deterministic Magic: The Gathering engine whose AI agents train, build decks, and play live on Twitch.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css?v=5">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="/favicon.svg?v=3" alt="" width="26" height="26">MayTech Labs</a>
+      <div class="bar-links">
+        <a href="https://github.com/maytech-labs/homebrew-tap"><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 13h-13zM9 7V5a3 3 0 0 1 6 0v2"/></svg>Homebrew tap</a>
+        <a href="https://www.twitch.tv/jogzonx"><svg viewBox="0 0 24 24"><path d="M21 2H3v16h5v4l4-4h5l4-4zM11 11V7M16 11V7"/></svg>Watch live</a>
+        <a href="https://github.com/maytech-labs"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a>
+      </div>
+    </div>
+    <nav class="wrap tabs">
+      <a href="/">Overview</a>
+      <a href="/#tools">Tools</a>
+      <a class="active" href="/#mtg">Magic: The Gathering</a>
+      <a href="/#learn">Learn &amp; license</a>
+      <a href="https://maytech-labs.github.io/arm-tools/">arm-tools docs</a>
+      <a href="https://maytech-labs.github.io/arm-lessons/">ARM64 course</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero h-tolarian">
+      <div class="hero-text">
+        <span class="eyebrow">Magic: The Gathering &middot; closed source</span>
+        <h1>Tolarian Machine</h1>
+        <p>A deterministic Magic: The Gathering engine, and AI agents that learn to play it. They build decks, train against each other, and play full games live on Twitch.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-white" href="https://www.twitch.tv/jogzonx">Watch on Twitch</a>
+          <a class="btn btn-ghost" href="/#mtg">Back to MayTech Labs</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="window w-front solo"><div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="c">match_started  heuristic vs model</span>
+<span class="g">turn 4</span>  <span class="b">cast</span> Llanowar Elves
+<span class="g">turn 5</span>  <span class="b">attack</span> Jungle Lion, Mountain Goat
+<span class="g">turn 6</span>  <span class="b">cast</span> Lightning Bolt <span class="c">&rarr; Soul Warden</span>
+<span class="g">turn 9</span>  <span class="b">activate</span> Jiang Yanggu <span class="c">+1</span>
+<span class="ok">match_ended    heuristic wins at 14 life</span></pre></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><b>4,075</b><span>real cards the engine can play</span></div>
+      <div class="stat"><b>733</b><span>official precon decks it's measured against</span></div>
+      <div class="stat"><b>3</b><span>kinds of agent: random, heuristic, and a learning model</span></div>
+      <div class="stat"><b>68</b><span>design decisions written down so far</span></div>
+    </section>
+
+    <section class="block">
+      <h2>How it works</h2>
+      <p class="sub">Three parts, each built so the next can trust it.</p>
+      <ol class="steps">
+        <li>
+          <h3>The engine</h3>
+          <p>Two-player Magic with the stack, priority, combat, and London mulligans. The engine alone decides what's legal, every game replays exactly from its seed, and rule invariants are checked after every game.</p>
+        </li>
+        <li>
+          <h3>The agents</h3>
+          <p>Agents only ever choose from the legal actions the engine offers. A heuristic player sets the bar; a policy-and-value network learns from self-play and imitation, then has to beat a league of past versions to be promoted.</p>
+        </li>
+        <li>
+          <h3>The broadcast</h3>
+          <p>Matches stream as public events only: life, board, combat, and the stack, but never a hand, a library, or a mulligan choice. A gateway turns that into the show you see on Twitch.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2>Learning the rules, one card at a time</h2>
+      <p class="sub">Magic has tens of thousands of cards. The engine grows in small, fully tested slices.</p>
+      <div class="prose">
+        <p>Each new mechanic is chosen by how many real cards it unlocks, then measured against the 733 official preconstructed decks: how many are fully playable, and how many are a few cards away. The Jiang Yanggu precon was the first 60-card precon to play in full.</p>
+        <p><strong>Recently added:</strong> planeswalkers and attacking them, fight, spells with more than one target, extort, evolve, affinity, lure, protection, hybrid mana, modal spells, infect and poison, undying and persist, and gaining control of permanents.</p>
+        <p><strong>Up next:</strong> proliferate, unearth, mill, divided damage, convoke, replacement effects, and a layer system.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>What you'll see on stream</h2>
+      <p class="sub">An unattended show, styled like a card-game client rather than a debugger.</p>
+      <div class="prose">
+        <ul>
+          <li><strong>Full games at a readable pace</strong>, with both players' cards and each important decision on screen.</li>
+          <li><strong>Every seat labeled honestly</strong> with the agent and deck playing it. When the learning model isn't seated, the stream says so.</li>
+          <li><strong>The workbench between matches:</strong> match generation, training, league evaluation, and deck search, with the latest results.</li>
+          <li><strong>Factual commentary</strong> generated from the game itself, plus a lo-fi soundtrack.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div>
+        <h2>Watch it play</h2>
+        <p>Tolarian Machine streams on Twitch as jogzonx.</p>
+      </div>
+      <a class="btn btn-blue" href="https://www.twitch.tv/jogzonx">twitch.tv/jogzonx</a>
+    </section>
+
+    <p class="note">Tolarian Machine is closed source. It is unofficial fan content, not approved or endorsed by Wizards of the Coast. Magic: The Gathering and its card names are property of Wizards of the Coast LLC.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <span>&copy; 2026 MayTech Labs. Source-available projects licensed under <a href="https://github.com/maytech-labs/real-license">REAL 1.0</a>.</span>
+      <a href="https://github.com/maytech-labs">github.com/maytech-labs</a>
+    </div>
+  </footer>
+</body>
+</html>

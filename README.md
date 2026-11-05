@@ -17,6 +17,10 @@ python3 -m http.server
 3. Add the project to the table in [`.github/profile/README.md`](https://github.com/maytech-labs/.github/blob/main/profile/README.md).
 4. Run `scripts/org-status.py` in the `.github` repo; it should report no drift for the new project.
 
+## Adding a project page
+
+Copy `tolarian-machine/index.html` into a new folder, like `my-project/index.html`, and point the project's card at `/my-project/`. Pages use root-relative paths (`/style.css`), so preview them through `python3 -m http.server`, not by opening the file. Set the `active` tab to the section the card lives in.
+
 If you change `style.css`, bump the `?v=` on its `<link>` so browsers don't use a cached copy.
 
 ## License
