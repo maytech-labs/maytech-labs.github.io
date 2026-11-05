@@ -162,6 +162,7 @@ a { color: var(--accent); text-decoration: none; }
 .install .g { color: var(--accent); }
 
 /* Junior lab: made-up companies, kept visibly separate from the real work */
+/* Junior lab styles, from here to the Footer section: Copyright (c) 2026 MayTech Labs. All rights reserved. Not licensed under REAL 1.0. */
 .a-soda { background: linear-gradient(135deg, #fef3c7, #fde68a); }
 .fun { font-family: ui-rounded, "SF Pro Rounded", "Nunito", -apple-system, system-ui, sans-serif; }
 .not-real { display: inline-block; font: 700 12px/1 ui-rounded, system-ui, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: #9a3412; background: #ffedd5; border: 2px dashed #fb923c; border-radius: 999px; padding: 6px 14px; }
