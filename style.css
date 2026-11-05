@@ -203,6 +203,28 @@ a { color: var(--accent); text-decoration: none; }
 .dish em { font-style: normal; font-weight: 700; color: #b91c1c; font-size: 13px; white-space: nowrap; }
 .dish + p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
 
+.a-burger { background: linear-gradient(135deg, #fef9c3, #fde047); }
+.hero.h-burger { background: radial-gradient(500px 260px at 85% 15%, rgba(255, 255, 255, 0.3), transparent 60%), linear-gradient(120deg, #b91c1c 0%, #ea580c 55%, #facc15 100%); }
+.hero.h-burger .not-real { background: #fff7ed; margin-bottom: 14px; }
+.burger { display: grid; justify-items: center; filter: drop-shadow(0 18px 24px rgba(80, 20, 0, 0.35)); }
+.burger i { display: block; width: 220px; }
+.burger .top { height: 70px; background: #f59e0b; border-radius: 110px 110px 14px 14px; background-image: radial-gradient(#fef3c7 2px, transparent 2.5px); background-size: 26px 18px; }
+.burger .lettuce { height: 14px; width: 236px; background: #65a30d; border-radius: 8px; margin-top: -2px; }
+.burger .cheese { height: 12px; width: 232px; background: #facc15; clip-path: polygon(0 0, 100% 0, 100% 40%, 82% 100%, 66% 40%, 0 40%); }
+.burger .patty { height: 34px; width: 228px; background: #78350f; border-radius: 14px; margin-top: -2px; }
+.burger .bottom { height: 30px; background: #f59e0b; border-radius: 8px 8px 22px 22px; margin-top: 2px; }
+.burger.small i { width: 110px; }
+.burger.small .top { height: 36px; border-radius: 55px 55px 8px 8px; background-size: 14px 10px; }
+.burger.small .lettuce { width: 118px; height: 8px; }
+.burger.small .cheese { width: 116px; height: 7px; }
+.burger.small .patty { width: 114px; height: 18px; border-radius: 8px; }
+.burger.small .bottom { height: 16px; border-radius: 5px 5px 12px 12px; }
+.flavor.red { border-color: #fecaca; background: #fffbfb; }
+.flavor.red small { color: #b91c1c; }
+.flavor.gold { border-color: #d6d3d1; background: #fafaf9; }
+.flavor.gold small { color: #57534e; }
+.flavor .here { font-size: 13px; font-weight: 700; color: var(--accent); }
+
 /* Footer */
 .footer { margin-top: 72px; border-top: 1px solid var(--line); background: var(--soft); }
 .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; padding-bottom: 24px; font-size: 13px; color: var(--faint); }
