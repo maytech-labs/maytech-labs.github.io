@@ -28,7 +28,7 @@ a { color: var(--accent); text-decoration: none; }
 .bar { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--fg); font-weight: 700; font-size: 16px; }
 .bar-links { display: flex; gap: 22px; }
-.bar-links a { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; font-weight: 500; }
+.bar-links a { display: flex; white-space: nowrap; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; font-weight: 500; }
 .bar-links a:hover { color: var(--fg); }
 .bar-links svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .tabs { display: flex; gap: 26px; overflow-x: auto; scrollbar-width: none; }
@@ -310,6 +310,9 @@ a { color: var(--accent); text-decoration: none; }
 
 /* Responsive */
 @media (max-width: 1000px) {
+  .bar-links { gap: 16px; }
+  .bar-links a { font-size: 0; gap: 0; }
+  .bar-links svg { width: 20px; height: 20px; }
   .features { grid-template-columns: 1fr 1fr; }
   .cards, .cards.four { grid-template-columns: 1fr 1fr; }
   .hero { grid-template-columns: 1fr; }
@@ -333,8 +336,5 @@ a { color: var(--accent); text-decoration: none; }
   .mini.pet { font-size: 10.5px; padding: 14px; }
   .install { font-size: 11.5px; }
   .bar-links a:first-child { display: none; }
-  .bar-links { gap: 16px; }
-  .bar-links a { font-size: 0; gap: 0; }
-  .bar-links svg { width: 20px; height: 20px; }
   .lineup, .tilde-wall { grid-template-columns: 1fr; }
 }
