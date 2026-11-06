@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: LicenseRef-REAL-1.0 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nap Detection Software · MayTech Labs</title>
+  <meta name="description" content="The world's most advanced nap detection software. It checks with the experts, and the answer is always yes.">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css?v=16">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a class="brand" href="/"><img src="/favicon.svg?v=4" alt="" width="26" height="26">MayTech Labs</a>
+      <div class="bar-links">
+        <a href="https://github.com/maytech-labs/homebrew-tap"><svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 13h-13zM9 7V5a3 3 0 0 1 6 0v2"/></svg>Homebrew tap</a>
+        <a href="https://www.twitch.tv/jogzonx"><svg viewBox="0 0 24 24"><path d="M21 2H3v16h5v4l4-4h5l4-4zM11 11V7M16 11V7"/></svg>Watch live</a>
+        <a href="https://www.youtube.com/@mana-bread"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg>YouTube</a>
+        <a href="https://discord.gg/3hMfYs6qg"><svg viewBox="0 0 24 24"><path d="M8.5 5C6.6 5.3 5 5.9 3.8 6.7 2.1 9.8 1.6 13.4 2 17c1.4 1.1 3 1.9 4.6 2.3l1.1-2M15.5 5c1.9.3 3.5.9 4.7 1.7 1.7 3.1 2.2 6.7 1.8 10.3-1.4 1.1-3 1.9-4.6 2.3l-1.1-2M7 16.4c3.3 1.4 6.7 1.4 10 0M7.6 7.6c2.9-.9 5.9-.9 8.8 0"/><circle cx="9" cy="12.6" r="1.2"/><circle cx="15" cy="12.6" r="1.2"/></svg>Discord</a>
+        <a href="https://github.com/maytech-labs"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>GitHub</a>
+      </div>
+    </div>
+    <nav class="wrap tabs">
+      <a href="/">Overview</a>
+      <a href="/#tools">Tools</a>
+      <a href="/#mtg">Magic: The Gathering</a>
+      <a href="/#learn">Learn &amp; license</a>
+      <a href="/#fun">Fun</a>
+      <a class="active" href="/#nap">Nap time</a>
+      <a href="/#junior">Junior lab</a>
+      <a href="https://maytech-labs.github.io/arm-tools/">arm-tools docs</a>
+      <a href="https://maytech-labs.github.io/arm-lessons/">ARM64 course</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero h-nap">
+      <div class="hero-text">
+        <span class="eyebrow">Nap time &middot; in your browser</span>
+        <h1>Nap Detection Software</h1>
+        <p>The world's most advanced nap detection software. One button, a panel of trusted experts, and an official verdict nobody can argue with.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-white" href="#check">Run a nap check</a>
+          <a class="btn btn-ghost" href="/#nap">Back to MayTech Labs</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="window w-front solo"><div class="dots"><i></i><i></i><i></i></div>
+<pre><span class="g">$</span> nap-check --subject <span class="y">"the little one"</span>
+<span class="c">checking the nap database</span>      <span class="ok">&#10003;</span>
+<span class="c">asking Santa Claus</span>             <span class="ok">&#10003;</span>
+<span class="c">consulting the Cookie Monster</span>  <span class="ok">&#10003;</span>
+<span class="c">dialing grandma</span>                <span class="ok">&#10003;</span>
+<span class="b">verdict</span>     <span class="y">NAP REQUIRED</span>
+<span class="b">confidence</span>  <span class="ok">100%</span></pre></div>
+      </div>
+    </section>
+
+    <section id="check" class="block">
+      <h2>Do I need a nap?</h2>
+      <p class="sub">Type a name, press the button, and let the software decide. When the verdict is in, press Lights out.</p>
+      <div class="nap" id="nap">
+        <label for="nap-name">Who's being checked?</label>
+        <div class="nap-row">
+          <input id="nap-name" type="text" maxlength="24" autocomplete="off" placeholder="A name, or leave it blank">
+          <button class="nap-go" id="nap-go" type="button">Do I need a nap?</button>
+        </div>
+        <div class="nap-bar" id="nap-bar" hidden><i></i></div>
+        <ol class="nap-log" id="nap-log" aria-live="polite"></ol>
+        <div class="verdict" id="verdict" hidden aria-live="polite">
+          <span class="stamp" aria-hidden="true">CERTIFIED<br>NAP TIME</span>
+          <small id="v-kicker">Official result</small>
+          <h3 id="v-title">Yes. Nap time.</h3>
+          <p id="v-text"></p>
+          <dl>
+            <dt>Subject</dt><dd id="v-subject"></dd>
+            <dt>Experts</dt><dd id="v-experts"></dd>
+            <dt>Confidence</dt><dd>100%</dd>
+            <dt>Issued</dt><dd id="v-issued"></dd>
+            <dt>Appeals</dt><dd id="v-appeals">None filed</dd>
+          </dl>
+          <div class="nap-row">
+            <button class="nap-btn primary" id="nap-lights" type="button">Lights out &#127769;</button>
+            <button class="nap-btn" id="nap-appeal" type="button">Appeal the decision</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Why it exists</h2>
+      <p class="sub">Backup, for the hardest part of the afternoon.</p>
+      <div class="prose">
+        <p>Getting a kid down for a nap can be the hardest part of the day. They aren't tired. They were never tired. They'll explain at length exactly how not tired they are, and when a parent says it's nap time, that's only the opening offer in a negotiation.</p>
+        <p>It goes better with a second opinion. Not from a parent, who clearly has an agenda, but from software: an impartial system that checks the nap database, asks Santa Claus, consults the Cookie Monster, and dials grandma before it rules. When the advanced nap-detection algorithms come back with a yes, it isn't us saying it anymore. It's the science.</p>
+        <p><strong>It has never once said no.</strong> That isn't a bug.</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><b>100%</b><span>of checks find that a nap is needed</span></div>
+      <div class="stat"><b>0</b><span>times it has ever said no</span></div>
+      <div class="stat"><b>6</b><span>experts consulted on every check</span></div>
+      <div class="stat"><b>1</b><span>appeals court, and it's a teddy bear</span></div>
+    </section>
+
+    <section class="block">
+      <h2>How it decides</h2>
+      <p class="sub">A rigorous, three-step process, every time.</p>
+      <ol class="steps">
+        <li>
+          <h3>The consultation</h3>
+          <p>Six experts weigh in, drawn from a panel that includes Santa Claus, grandma, the moon, and the sheep. It's a little different each time, so it never feels rehearsed.</p>
+        </li>
+        <li>
+          <h3>The verdict</h3>
+          <p>An official, stamped result with a case number and 100% confidence. Appeals are welcome and reviewed by the teddy bear. They have all been denied.</p>
+        </li>
+        <li>
+          <h3>Lights out</h3>
+          <p>The whole screen becomes a quiet night sky with a moon and a nap timer. Tap anywhere, or press Escape, when it's time to wake up.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="callout">
+      <div>
+        <h2>Still not tired?</h2>
+        <p>Run another check. The experts are standing by.</p>
+      </div>
+      <a class="btn btn-blue" href="#check">Ask again</a>
+    </section>
+
+    <p class="note">Nap Detection Software doesn't detect anything, and it always says yes. Nobody is actually called, not Santa Claus, not the Cookie Monster, and not grandma. Cookie Monster is a trademark of Sesame Workshop, which has nothing to do with this.</p>
+  </main>
+
+  <div class="nap-night" id="nap-night" role="dialog" aria-modal="true" aria-labelledby="night-title" tabindex="-1" hidden>
+    <div>
+      <div class="moon" aria-hidden="true">&#127769;</div>
+      <h2 id="night-title">Nap time.</h2>
+      <p>Shh. The software has spoken.</p>
+      <div class="timer"><span id="night-timer">0:00</span> asleep</div>
+      <p style="margin-top:28px;font-size:13px">Tap anywhere to wake up</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <span>&copy; 2026 MayTech Labs. Source-available projects licensed under <a href="https://github.com/maytech-labs/real-license">REAL 1.0</a>.</span>
+      <a href="https://github.com/maytech-labs">github.com/maytech-labs</a>
+    </div>
+  </footer>
+
+  <script>
+  (() => {
+    const $ = (id) => document.getElementById(id);
+    const panel = $("nap"), nameInput = $("nap-name"), go = $("nap-go"), log = $("nap-log");
+    const bar = $("nap-bar"), fill = bar.firstElementChild, verdict = $("verdict");
+    const lights = $("nap-lights"), appeal = $("nap-appeal"), night = $("nap-night");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+
+    const FIRST = "Checking the nap database 📖";
+    const LAST = "Running advanced nap-detection algorithms 🤖";
+    const PANEL = [
+      "Asking Santa Claus 🎅",
+      "Consulting the Cookie Monster 🍪",
+      "Dialing grandma 📞",
+      "Checking with the teddy bear 🧸",
+      "Counting sheep 🐑",
+      "Asking the moon 🌙",
+      "Measuring yawns per minute 🥱",
+      "Checking eyelid droopiness 👀",
+      "Calling the Sandman ✨",
+      "Polling the stuffed animals 🦒",
+      "Reviewing the snack-to-grumpiness ratio 🍎",
+      "Consulting the wise old owl 🦉",
+    ];
+    const APPEAL = [
+      "Filing the appeal 📝",
+      "Waking the judge (the teddy bear) 🧸",
+      "Reviewing the evidence 🔍",
+      "Asking grandma for a second opinion 📞",
+    ];
+    const SLEEPY = ["😴", "💤", "🌙", "😪", "⭐"];
+
+    let running = false, appeals = 0, timers = [], floatTimer = null, napStart = 0, napTick = null;
+
+    const later = (fn, ms) => timers.push(setTimeout(fn, ms));
+    const pause = () => reduced.matches ? 350 : 900 + Math.random() * 600;
+    const pick = (list, n) => list.slice().sort(() => Math.random() - 0.5).slice(0, n);
+    const subject = () => nameInput.value.trim();
+
+    try { nameInput.value = localStorage.getItem("nap-name") || ""; } catch {}
+    nameInput.addEventListener("change", () => {
+      try { localStorage.setItem("nap-name", subject()); } catch {}
+    });
+
+    function runSteps(steps, done) {
+      running = true;
+      go.disabled = appeal.disabled = lights.disabled = true;
+      log.textContent = "";
+      bar.hidden = false;
+      fill.style.width = "0";
+      let i = 0;
+      const next = () => {
+        const prev = log.lastElementChild;
+        if (prev) { prev.classList.add("done"); prev.textContent = prev.dataset.step; }
+        fill.style.width = (i / steps.length) * 100 + "%";
+        if (i === steps.length) {
+          later(() => {
+            running = false;
+            go.disabled = appeal.disabled = lights.disabled = false;
+            done();
+          }, reduced.matches ? 150 : 500);
+          return;
+        }
+        const li = document.createElement("li");
+        li.dataset.step = steps[i++];
+        li.textContent = li.dataset.step + "…";
+        log.append(li);
+        later(next, pause());
+      };
+      next();
+    }
+
+    function check() {
+      if (running) return;
+      timers.forEach(clearTimeout); timers = [];
+      stopFloat();
+      panel.classList.remove("asleep");
+      verdict.hidden = true;
+      appeals = 0;
+      const steps = [FIRST, ...pick(PANEL, 4), LAST];
+      runSteps(steps, () => showVerdict(steps.length));
+    }
+
+    function showVerdict(n) {
+      const who = subject();
+      $("v-kicker").textContent = "Official result · Case NAP-" + (10000 + Math.floor(Math.random() * 90000));
+      $("v-title").textContent = "Yes. Nap time.";
+      $("v-text").textContent = (who ? who + " needs" : "You need") + " a nap. The experts agree.";
+      $("v-subject").textContent = who || "You";
+      $("v-experts").textContent = n + " of " + n + " agree";
+      $("v-issued").textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+      $("v-appeals").textContent = "None filed";
+      verdict.hidden = false;
+      panel.classList.add("asleep");
+      startFloat();
+      lights.focus({ preventScroll: true });
+      verdict.scrollIntoView({ behavior: reduced.matches ? "auto" : "smooth", block: "nearest" });
+    }
+
+    function fileAppeal() {
+      if (running) return;
+      verdict.hidden = true;
+      runSteps([APPEAL[0], ...pick(APPEAL.slice(1), 2)], () => {
+        appeals++;
+        $("v-kicker").textContent = "Appeal decision · the teddy bear presiding";
+        $("v-title").textContent = "Appeal denied.";
+        $("v-text").textContent = "The ruling stands. " + (subject() ? subject() + " still needs" : "You still need") + " a nap.";
+        $("v-appeals").textContent = appeals + (appeals === 1 ? " filed, 1 denied" : " filed, " + appeals + " denied");
+        verdict.hidden = false;
+        appeal.focus({ preventScroll: true });
+      });
+    }
+
+    function spawn(host) {
+      if (reduced.matches) return;
+      const z = document.createElement("span");
+      z.className = "nap-float";
+      z.setAttribute("aria-hidden", "true");
+      z.textContent = SLEEPY[Math.floor(Math.random() * SLEEPY.length)];
+      const secs = 9 + Math.random() * 6;
+      z.style.left = Math.random() * 92 + "%";
+      z.style.fontSize = 1.6 + Math.random() * 1.8 + "rem";
+      z.style.setProperty("--o", (0.45 + Math.random() * 0.4).toFixed(2));
+      z.style.setProperty("--rise", host.clientHeight + 120 + "px");
+      z.style.animationDuration = secs + "s";
+      host.append(z);
+      setTimeout(() => z.remove(), secs * 1000 + 100);
+    }
+
+    function startFloat() {
+      stopFloat();
+      const host = night.hidden ? panel : night;
+      for (let i = 0; i < 4; i++) setTimeout(() => spawn(host), i * 200);
+      floatTimer = setInterval(() => spawn(night.hidden ? panel : night), 1800);
+    }
+
+    function stopFloat() {
+      clearInterval(floatTimer); floatTimer = null;
+      document.querySelectorAll(".nap-float").forEach((z) => z.remove());
+    }
+
+    function lightsOut() {
+      const who = subject();
+      $("night-title").textContent = who ? "Nap time, " + who + "." : "Nap time.";
+      night.hidden = false;
+      document.body.style.overflow = "hidden";
+      night.focus();
+      napStart = Date.now();
+      const tick = () => {
+        const s = Math.floor((Date.now() - napStart) / 1000);
+        const h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60, sec = String(s % 60).padStart(2, "0");
+        $("night-timer").textContent = h ? h + ":" + String(m).padStart(2, "0") + ":" + sec : m + ":" + sec;
+      };
+      tick();
+      napTick = setInterval(tick, 1000);
+      startFloat();
+      if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(() => {});
+    }
+
+    function wakeUp() {
+      if (night.hidden) return;
+      night.hidden = true;
+      document.body.style.overflow = "";
+      clearInterval(napTick);
+      startFloat();
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+      lights.focus({ preventScroll: true });
+    }
+
+    go.addEventListener("click", check);
+    nameInput.addEventListener("keydown", (e) => { if (e.key === "Enter") check(); });
+    appeal.addEventListener("click", fileAppeal);
+    lights.addEventListener("click", lightsOut);
+    night.addEventListener("click", wakeUp);
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") wakeUp(); });
+    document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement) wakeUp(); });
+  })();
+  </script>
+</body>
+</html>
