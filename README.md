@@ -31,4 +31,4 @@ Ideas for the site that haven't shipped yet are in [`docs/ideas.md`](docs/ideas.
 
 [REAL 1.0](LICENSE.md)
 
-Exception: the Junior lab (the made-up companies, their names, menus, slogans, and artwork) is not licensed under REAL 1.0. Copyright (c) 2026 MayTech Labs, all rights reserved. That covers the `barleys-tired-root-beer/`, `breadys/`, `burger-up/`, `h-diner/`, and `tilde-house/` pages, the Junior lab section of `index.html`, and the Junior lab styles in `style.css`.
+Exception: the Junior lab (the made-up companies, their names, menus, slogans, and artwork) is not licensed under REAL 1.0. Copyright (c) 2026 MayTech Labs, all rights reserved. That covers the `barleys-tired-root-beer/`, `breadys/`, `burger-up/`, `h-diner/`, `tilde-house/`, and `old-fashioned-link-hotel/` pages, the Junior lab section of `index.html`, and the Junior lab styles in `style.css`.
