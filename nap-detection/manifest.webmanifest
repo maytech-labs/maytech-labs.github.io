@@ -1,0 +1,12 @@
+{
+  "name": "Nap Detection Software",
+  "short_name": "Nap Check",
+  "description": "The world's most advanced nap detection software. It's always nap time.",
+  "start_url": "/nap-detection/",
+  "scope": "/nap-detection/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e1b4b",
+  "theme_color": "#1e1b4b",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

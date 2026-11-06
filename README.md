@@ -23,6 +23,8 @@ Fun is for toys, grouped under `<h3 class="group">` headings by where they run: 
 
 Copy `tolarian-machine/index.html` into a new folder, like `my-project/index.html`, and point the project's card at `/my-project/`. Pages use root-relative paths (`/style.css`), so preview them through `python3 -m http.server`, not by opening the file. Set the `active` tab to the section the card lives in.
 
+`nap-detection/` is the exception: it's a standalone, full-screen phone app with its own inline styles, a web manifest, and no site header or footer. Don't copy it as a project page.
+
 If you change `style.css`, bump the `?v=` on its `<link>` so browsers don't use a cached copy.
 
 Ideas for the site that haven't shipped yet are in [`docs/ideas.md`](docs/ideas.md).
